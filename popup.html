@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="left">
+        <img src="threeLines.png" alt="Icon" class="icon">
+      </div>
+      <div class="middle">
+        <h1 class="title">
+          <img src="title.png" alt="Title">
+        </h1>
+      </div>
+      <div class="right">
+        <button class="closeButton">&times;</button>
+      </div>
+    </div>
+    <div class="tabs">
+      <div class="tab active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </div>
+      <div class="tab">
+        <i class="fas fa-question"></i>
+        <span>Help</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <div class="box-container" id="boxes4">
+        <div class="box" id="ttsBox">
+          <img src="tts.png" alt="1">
+        </div>
+        <div class="box" id="colorBlindBox">
+          <img src="colorBlind.png" alt="2">
+        </div>
+        <div class="box" id="languageBox">
+          <img src="screening.png" alt="3">
+        </div>
+        <div class="box" id="fontSizeBox">
+          <img src="fontSize.png" alt="4">
+        </div>
+      </div>
+      <div class="box-container" id="backBoxes4" style="display: none;">
+        <div class="box" id="backBox1">
+          <img src="tts.png" alt="1">
+        </div>
+        <div class="box" id="backBox2">
+          <img src="colorBlind.png" alt="2">
+        </div>
+        <div class="box" id="backBox3">
+          <img src="screening.png" alt="3">
+        </div>
+        <div class="box" id="backBox4">
+          <img src="fontSize.png" alt="4">
+        </div>
+      </div>
+    </div>
+    <!-- Replace the text-to-speech content with the updated code -->
+    <div id="textToSpeechContent" class="content" style="display: none;">
+  <h4 class="productLabel1">Text-to-speech: <img src=back.png class="backButton" style="float: right;"></h4>
+  <div class="ttsDropdown">
+    <select id="ttsVoicesDropdown" class="exampleDropdown">
+      <!-- Options for TTS voices will be dynamically added here -->
+    </select>
+  </div>
+  <div class="textSpeechStatus">
+    <button class="ttsButton" id="ttsChangeTest">Test Voice</button>
+  </div>
+</div>
+
+    <div id="colorBlindContent" class="content" style="display: none;">
+      <h4 class="productLabel1">Colorblind Views: <img src=back.png class="backButton2" style="float: right;"></h4>
+      <div class="radioGroup">
+        <label class="radioButton">
+          <input type="radio" name="colorBlindOption" value="normal" checked>
+          <span class="radioCheckmark"></span>
+          <span class="radioLabel">Normal</span>
+        </label>
+        <label class="radioButton">
+          <input type="radio" name="colorBlindOption" value="deuteranomaly">
+          <span class="radioCheckmark"></span>
+          <span class="radioLabel">Deuteranomaly</span>
+        </label>
+        <label class="radioButton">
+          <input type="radio" name="colorBlindOption" value="protanomaly">
+          <span class="radioCheckmark"></span>
+          <span class="radioLabel">Protanomaly</span>
+        </label>
+        <label class="radioButton">
+          <input type="radio" name="colorBlindOption" value="tritanomaly">
+          <span class="radioCheckmark"></span>
+          <span class="radioLabel">Tritanomaly</span>
+        </label>
+      </div>
+    </div>
+    <div id="languageContent" class="content" style="display: none;">
+      <h4 class="productLabel1">Change Language: <img src=back.png class="backButton3" style="float: right;"></h4>
+      <div class="dropdown">
+        <select class="exampleDropdown">
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="hindi">Hindi</option>
+        </select>
+      </div>
+      <button class="applyButton">Apply Changes</button>
+    </div>
+    <div id="fontSizeContent" class="content" style="display: none;">
+      <h4 class="productLabel1">Manage font visibility: <img src="back.png" class="backButton4" style="float: right;"></h4>
+    
+      <!-- Font Size Section -->
+      <div>
+        <label for="fontSizeDropdown">Font Size:</label>
+        <div class="dropdown" style="display: flex; align-items: center;">
+          <select id="fontSizeDropdown" class="rightDropdown">
+            <option value="12px">Small</option>
+            <option value="16px">Medium</option>
+            <option value="20px">Large</option>
+          </select>
+          <div style="margin-left: 10px;">
+            <label for="syllableHighlightToggle" class="SHlabel">Syllable Highlight:</label>
+            <label class="switch">
+              <input type="checkbox" id="syllableHighlightToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Font Family Section -->
+      <div>
+        <label for="fontFamilyDropdown">Font:</label>
+        <div class="dropdown" style="display: flex; align-items: center;">
+          <select id="fontFamilyDropdown" class="rightDropdown">
+            <option value="Default">Default</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+            <option value="Trebuchet MS">Trebuchet</option>
+          </select>
+          <div style="margin-left: 10px;">
+            <label for="lineSpacingDropdown" class="LSlabel">Line Spacing:</label>
+            <select id="lineSpacingDropdown" class="sideDropdown">
+              <option value="spacing1">Default</option>
+              <option value="spacing2">Single</option>
+              <option value="spacing3">1.15</option>
+              <option value="spacing4">1.5</option>
+              <option value="spacing5">Double</option>
+              <!-- Add more line spacing options if needed -->
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="separator">
+      <span class="line"></span>
+      <span class="text">Text-Specific Accessibility</span>
+      <span class="line"></span>
+    </div>
+    <div class="productSection">
+      <div class="productInfo">
+        <h4 class="productLabel">Enable EzyRead Assistant:</h4>
+        <div class="toggleButton">
+          <input type="checkbox" id="lexileToggle">
+          <label for="lexileToggle"></label>
+          <div class="helpIcon">
+            <i class="fas fa-question-circle"></i>
+          </div>
+        </div>
+        <h4 class="productLabel">Videos Related to Current Article:</h4>
+        <div class="buttonGroup">
+          <button class="summaryButton2" id="viewVideosButton">View Videos</button>
+          <div class="helpIcon">
+            <i class="fas fa-question-circle"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <a href="mailto:EzyReadHelp@gmail.com" target="_blank" id="contactUs" style="color: black; text-decoration: none; font-size: 14px; margin-top: -10px;">Contact us</a>
+      <span id="info" class="linkWebsite">Learn More</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
