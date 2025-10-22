@@ -259,37 +259,43 @@ npm run build
 ```
 EzyRead/
 ├── manifest.json              # Extension configuration
-├── popup.html                 # Main popup interface
-├── popup.js                   # Popup functionality
-├── popup.css                  # Popup styling
-├── background.js              # Background service worker
-├── contentScript.js           # Main content script with lexicon
-├── contentScript2.js          # Additional content scripts
-├── contentScript4.js          # Specific page content handlers
-├── contentScript5.js          # Extended functionality
-├── contentScriptMain.js       # Main content orchestrator
-├── dpcontent.js               # Dynamic content handler
-├── index.html                 # Language selection page
-├── index.js                   # Index page functionality
-├── script.js                  # General utility scripts
-├── style.css                  # Global styles
-├── altPopup.html              # Alternative popup interface
-├── altPopup.js                # Alternative popup logic
-├── altPopup.css               # Alternative popup styles
 ├── package.json               # Node.js dependencies
 ├── README.md                  # Project documentation
-├── icon.png                   # Extension icon (128x128)
-├── title.png                  # Logo image
-├── tts.png                    # Text-to-speech icon
-├── colorBlind.png             # Colorblind filter icon
-├── screening.png              # Language icon
-├── fontSize.png               # Font size icon
-├── back.png                   # Back button icon
-├── threeLines.png             # Menu icon
-├── mic.png                    # Microphone icon
-├── old.png                    # Archive icon
-├── AvenirNextLTPro-Bold.otf   # Custom font
-├── licensed-image.jfif        # Licensed assets
+├── src/                       # Source code
+│   ├── pages/                 # HTML pages
+│   │   ├── popup.html         # Main popup interface
+│   │   ├── index.html         # Language selection page
+│   │   └── altPopup.html      # Alternative popup interface
+│   ├── scripts/               # JavaScript files
+│   │   ├── background.js      # Background service worker
+│   │   ├── popup.js           # Popup functionality
+│   │   ├── contentScript.js   # Main content script with lexicon
+│   │   ├── contentScript2.js  # Additional content scripts
+│   │   ├── contentScript4.js  # Specific page content handlers
+│   │   ├── contentScript5.js  # Extended functionality
+│   │   ├── contentScriptMain.js # Main content orchestrator
+│   │   ├── dpcontent.js       # Dynamic content handler
+│   │   ├── index.js           # Index page functionality
+│   │   ├── script.js          # General utility scripts
+│   │   └── altPopup.js        # Alternative popup logic
+│   └── styles/                # CSS files
+│       ├── popup.css          # Popup styling
+│       ├── style.css          # Global styles
+│       └── altPopup.css       # Alternative popup styles
+├── assets/                    # Static assets
+│   ├── images/                # Image files
+│   │   ├── icon.png           # Extension icon (128x128)
+│   │   ├── title.png          # Logo image
+│   │   ├── tts.png            # Text-to-speech icon
+│   │   ├── colorBlind.png     # Colorblind filter icon
+│   │   ├── screening.png      # Language icon
+│   │   ├── fontSize.png       # Font size icon
+│   │   ├── back.png           # Back button icon
+│   │   ├── threeLines.png     # Menu icon
+│   │   ├── mic.png            # Microphone icon
+│   │   └── old.png            # Archive icon
+│   └── fonts/                 # Font files
+│       └── AvenirNextLTPro-Bold.otf # Custom font
 └── _metadata/                 # Chrome extension metadata
     └── verified_contents.json
 ```
@@ -381,7 +387,7 @@ SOFTWARE.
 ## 📞 Contact
 
 ### Email
-**EzyReadHelp@gmail.com** - For questions, support, or feedback
+**amogh.thodati2@gmail.com** - For questions, support, or feedback
 
 ### GitHub
 - **Repository**: [https://github.com/AmoghThodati2/EzyRead](https://github.com/AmoghThodati2/EzyRead)

@@ -11,29 +11,29 @@
     "scripting"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/pages/popup.html",
     "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
+      "16": "assets/images/icon.png",
+      "48": "assets/images/icon.png",
+      "128": "assets/images/icon.png"
     }
   },
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "assets/images/icon.png",
+    "48": "assets/images/icon.png",
+    "128": "assets/images/icon.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/scripts/background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["contentScript.js"]
+      "js": ["src/scripts/contentScript.js"]
     },
     {
       "matches": ["*://*/*.html*", "*://*/news/*", "*://*/2024/*", "*://*/politics/*"],
-      "js": ["contentScript4.js"]
+      "js": ["src/scripts/contentScript4.js"]
     }
   ]
 }

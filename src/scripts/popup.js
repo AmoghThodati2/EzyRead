@@ -408,7 +408,7 @@ function applyColorblindFilter(type) {
 
 document.getElementById('languageBox').addEventListener('click', function() {
   // Open the new tab when the button is clicked
-  chrome.tabs.create({ url: 'index.html' }); // Replace 'newtab.html' with the actual file name
+  chrome.tabs.create({ url: chrome.runtime.getURL('src/pages/index.html') }); // Replace 'newtab.html' with the actual file name
 });
 
 // Section 1: Event Listener for DOM Content Loaded
